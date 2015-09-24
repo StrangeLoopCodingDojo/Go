@@ -9,35 +9,35 @@ func TestHello(t *testing.T) {
 }
 
 func TestAddRomanIs(t *testing.T) {
-	if AddRoman("I", "I") != "II" {
+	if RomanNumeral("I").Add("I") != "II" {
 		t.Fatal("I+I should == II")
 	}
 
-	if AddRoman("I", "II") != "III" {
+	if RomanNumeral("I").Add("II") != "III" {
 		t.Fatal("I + II should == III")
 	}
 }
 
 func TestAddRomanV(t *testing.T) {
-	if AddRoman("I", "III") != "IV" {
+	if RomanNumeral("I").Add("III") != "IV" {
 		t.Fatal("I+III should == IV")
 	}
 
-	if AddRoman("III", "III") != "VI" {
+	if RomanNumeral("III").Add("III") != "VI" {
 		t.Fatal("III+III should == VI")
 	}
 
-	if AddRoman("IV", "I") != "V" {
+	if RomanNumeral("IV").Add("I") != "V" {
 		t.Fatal("IV+I should == V")
 	}
 
-	if AddRoman("V", "I") != "VI" {
+	if RomanNumeral("V").Add("I") != "VI" {
 		t.Fatal("V+I should == VI")
 	}
 }
 
 //func TestAddRomanIVPlusVI(t *testing.T) {
-//	if AddRoman("IV", "VI") != "X" {
+//	if RomanNumeral("IV").Add("VI") != "X" {
 //		t.Fatal("IV+VI should == X")
 //	}
 //}
